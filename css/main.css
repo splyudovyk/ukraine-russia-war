@@ -975,6 +975,10 @@ footer {
     position:relative;
 }
 
+.pagefooter {
+    top:450px;
+}
+
 .footer-fixed {
     position:fixed;
     bottom:0;
