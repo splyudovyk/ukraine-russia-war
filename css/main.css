@@ -1,0 +1,1238 @@
+/*Resetting Styles, Setting Font Family, Declaring Color Variables*/
+
+* {
+    font-family: sans-serif;
+    margin:0;
+
+    --color-main-light: rgb(216, 216, 216);
+    --color-main-dark: rgba(19, 19, 19, 0.9);
+    --color-medium: rgba(158, 158, 158, 0.651); 
+    --color-dark-shade: rgba(29, 29, 29, 0.7);
+    --color-semi-transparent: rgba(180, 180, 180, 0.4);
+    --layer-color: rgba(83, 83, 83, 0.699);
+}
+
+/*General Styles*/
+
+/*General Body Style and Background Image*/
+body {
+    --body-bg: url('../img/mainbgimg.jpg');
+    background-color: rgba(247, 228, 194, 0.4);
+}
+
+/*Links Have No Text Decoration and Default to White*/
+a {
+    font-family: inherit;
+    text-decoration:none;
+    color:white;
+}
+
+.textcontent-3 a, .textcontent-2 a {
+    color:rgb(37, 163, 205);
+}
+.textcontent-3 a:hover, .textcontent-2 a:hover {
+    color:rgb(83, 194, 231);
+}
+
+/*Bodies With Background Images*/
+
+/*General Background Image Style*/
+.body-bg-img {
+    background-image: var(--body-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    position:fixed;
+}
+
+/*Pages Backgrounds*/
+
+/*Fixed Background Image*/
+.bg-img {
+    position:fixed;
+    top:0;
+    min-height:100vh;
+    min-width:100vw;
+    z-index:-2;
+    
+    background-position:center;
+    background-size:cover;
+}
+
+/*Home Page Background Image*/
+.bg-img-main {
+    --bg-img: url('../img/mainbgimg2.jpg');
+    background-image: var(--bg-img);
+}
+
+.bg-img-sol {
+    --bg-img: url('../img/causesbg.jpg');
+    background-image: var(--bg-img);
+}
+
+.bg-img-back {
+    --bg-img: url('../img/bgimgback.jpg');
+    background-image: var(--bg-img);
+}
+
+/*Darker Layer Over Background Image on Home Page*/
+.layer {
+    background-color: rgba(23, 27, 41, 0.5);
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    z-index:-1;
+}
+
+/*Header and Nav Bar*/
+
+/*General Header Style*/
+header {
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    
+    box-sizing:border-box;
+    width:100vw;
+    height:53px;
+    padding:15px;
+
+    z-index:20;
+    font-size:15px;
+    
+    display:flex;
+    align-items:center;
+    
+    color:var(--color-main-light);
+    background-color: var(--color-main-dark);
+
+    --header-font-size: 1.1rem;
+}
+
+/*Logo In Header*/
+
+/*Logo Container to Ensure Proper Formatting and Centering*/
+.logo {
+    display:inline-flex;
+    justify-content:center;
+    align-content:center;
+}
+
+/*Logo Itself*/
+.logo img {
+    width: 150px;
+}
+
+/*Nav Bar and Links for Moving Between Pages*/
+
+/*Resetting Materialize Nav Styles*/
+nav {
+    all:revert;
+}
+
+/*Nav Section with Dropdown, Sign In, and Sign Up*/
+
+/*General Link Styles*/
+.link {
+    white-space: nowrap;
+    
+    display:inline-flex;
+    align-items:center;
+    
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin:0;
+    height:100%;
+    
+    color: white;
+    font-size: var(--header-font-size);
+    text-decoration:none;
+    transition:0.2s;
+}
+
+/*Links Container*/
+.nav-links {
+    display:inline-flex;
+    height:53px;
+    position:absolute;
+    right:20px;
+    margin:0;
+}
+
+/*Nav Bar Font Size, Weight, and Color*/
+.nav-links a, .nav-links h5 {
+    font-size:15px;
+    font-weight:100;
+}
+
+/*Title and Image Choices on Home Page*/
+
+/*Div of Title and Image Choices on Home Page*/
+#title-div {
+    height:100vh;
+    position:fixed;
+    width:100vw;
+    display:flex;
+    align-content:center;
+    justify-content: center;
+}
+
+#title-div-s{
+    height:450px;
+    position:fixed;
+    width:100vw;
+    display:flex;
+    align-content:center;
+    justify-content: center;
+}
+
+.main-content-s{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    background-color: rgb(0,0,0,.6);
+    top:450px;
+}
+
+
+.logo {
+    font-family: 'Quicksand', sans-serif;
+    font-weight:700;
+}
+.logo:hover {
+    color:rgb(189, 206, 221);
+} 
+
+
+.title {
+    align-self:center;
+    justify-self:center;
+    width:80vw;
+    position: absolute;
+    display: block;
+    color: white; 
+    font-size: 7.5vw;
+    cursor: pointer;
+    text-align:center;
+    font-weight:normal !important;
+    cursor:default;
+
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500 !important;
+}
+
+#down-arrow{
+    position:absolute;
+    color:white;
+    font-size:100px;
+    width:100vw;
+    margin-top:55vh;
+    text-align:center;
+}
+
+/*Background Style for Main Content (Under Title and Image Choices) on Home Page*/
+
+/*Main Page Content Underneath Title Div and Above Footer*/
+.main-content{
+    position:relative;
+    top:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/*Containers for Carousels and Carousel Titles*/
+.index-main {
+    background-color: rgb(0,0,0,.6);
+    display:flex;
+    flex-direction: column;
+}
+
+/*Inspirational Quote*/
+aside {
+    height:fit-content;
+    text-align:center;
+    color:white;
+    font-size:45px;
+    padding:5%;
+}
+
+/*Carousels*/
+
+/*Carousel Labels and Anchors*/
+
+/*Labels Above Carousels*/
+h4 {
+    font-family: 'Sofia Sans', sans-serif;
+    color: whitesmoke;
+    background-color: rgb(0, 67, 145)/*rgb(205, 144, 0)*/;
+    width:90vw;
+    margin:20px 0 0;
+    align-self: center;
+    padding:10px;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+}
+
+h5 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.textcontent-3 h5, .textcontent-2 h5 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-weight: 600px;
+}
+
+.textcontent-2 h5 {
+    margin-top: 0;
+}
+
+.textcontent-3 p, .textcontent-2 p {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+/*Mental Health Carousel Anchor Just Above Caoursel Label*/
+.home-carousel {
+    /*Offsets mental health carousel anchor to adjust for fixed header*/
+    padding-top:80px;
+    margin-top:-80px;
+
+    /*Places offset below image choices to still allow for user to click on them*/
+    z-index:1;
+
+    height:500px !important;
+}
+
+.home-carousel h4{
+    background-color: var(--color-semi-transparent);
+}
+
+.home-carousel img{
+    display: block;
+    height: 250px;
+    width: auto;
+    margin: 20px auto;
+    z-index: 2;
+}
+
+.home-carousel p{
+    display: block;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    width: 70%;
+    margin: 20px auto;
+}
+
+/*Solution Styles*/
+.solution {
+    color: var(--color-main-light) !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.solution p{
+    margin:7px 0;
+    font-size: 1rem !important;
+}
+
+/*Solution Text Content*/
+.textcontent{
+    width:60%;
+    background-color: rgb(0,0,0,.75);
+    padding: 50px;
+    border:2px solid transparent;
+    height:100%;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.textcontent h5{
+    position:relative;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.textcontent-2{
+    width:80% !important;
+    background-color: rgb(0,0,0,.75);
+    padding: 50px;
+    border:2px solid transparent;
+    height:100%;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.textcontent-2 h5{
+    position:relative;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.background{
+    height:770px !important;
+}
+
+.background .textcontent-3, .textcontent-2 {
+    width:70%;
+    height: 730px;
+}
+
+.number {
+    font-family: inherit;
+    color:rgb(116, 171, 188);
+}
+
+.roadtowar{
+    height:650px !important;
+}
+
+.soviet .textcontent-3 {
+    width:70%;
+    height: 670px;
+}
+
+
+.soviet {
+    height:710px !important;
+}
+
+.homepgcarousel .textcontent-3 {
+    width:60%;
+    height:550px !important;
+}
+
+.homepgcarousel {
+    height: 590px !important;
+}
+
+.roadtowar .textcontent-3, .textcontent-2 {
+    width:70%;
+    height: 610px;
+}
+
+.textcontent-3 {
+    width:60%;
+    background-color: rgb(0,0,0,.75);
+    padding: 50px 50px 25px;
+    border:2px solid transparent;
+    height:100%;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+    margin: 20px auto;
+}
+
+.textcontent-2 {
+    width:60%;
+    background-color: rgb(0,0,0,.75);
+    padding: 50px 50px 25px;
+    border:2px solid transparent;
+    height:100%;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+    margin: 20px auto;
+}
+
+.mapitem {
+    color: var(--color-main-light) !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.mapitem p{
+    margin:7px 0 0;
+    font-size: 1rem !important;
+}
+
+h6 {
+    background: rgb(213, 244, 255);
+    color:black;
+    font-family: 'Quicksand', sans-serif;
+    padding:10px 20px;
+    width: 60%;
+    margin: 25px 0 5px;
+    border-radius: 5px;
+    line-height: 22px;
+}
+
+
+/*Most Permanent Solution Container*/
+.randomcontainer {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:550px;
+}
+
+.randomcontainer-2 {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px 0;
+}
+
+/*Replace Pipe Slide/Item*/
+#replacepipes{
+    width: 800px;
+    max-width:95%;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    height: 500px;
+    background-image: url('../img/pipes.jpg');
+}
+#replacepipes h5 {
+    margin: 0px 0 25px;
+}
+#pipe {
+    width:70%;
+    min-width: 400px;
+    height: fit-content;
+    align-self:center;
+    justify-self:center;
+}
+
+/*Restoring Faith Slide/Item*/
+#restoringfaith {
+    background-image: url('../img/flintgov.jpeg');
+}
+#restoringfaith h5 {
+    margin: 0px 0 15px;
+}
+#mistrust{
+    overflow:hidden;
+}
+
+.solution h5 {
+    font-size:1.5rem;
+}
+
+#lead {
+    background-image: url('../img/lead.jpg');
+}
+#lead h5 {
+    margin: 0px 0 15px;
+}
+
+#savingmoney {
+    background-image: url('../img/money.jpg');
+}
+
+#savingmoney h5, #whatistheissue h5, #flintriver h5 {
+    margin:0 0 20px;
+}
+
+.colorlink {
+    color:rgb(121, 183, 204);
+}
+.colorlink:hover {
+    color:rgb(42, 42, 231);
+}
+
+.whyitmatters {
+    height:600px !important;
+}
+
+.whyitmatters .textcontent-3 {
+    height:560px;
+}
+
+#flintriver {
+    background-image: url('../img/riverfire.jpg')
+}
+
+.background {
+    width: 100% !important;
+}
+
+/*Carousel Container*/
+.carousel {
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    align-self:center;
+    padding:0;
+    margin:20px 0;
+    width:85vw;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+/*Carousel Items*/
+.carousel-item{
+    all:revert;
+
+    position:relative;
+    box-sizing: border-box;
+}
+
+.solutions{
+    height:500px;
+}
+
+.warmaps{
+    height: 800px !important;
+}
+
+
+
+/*Water Bottle Slide*/
+#waterbottle{
+    background-image: url('../img/waterbottles.jpg');
+}
+#waterbottle h5{
+    margin: 45px 0 25px;
+}
+
+#faith{
+    background-image: url('../img/waterbottles.jpg');
+}
+#faith h5{
+    margin: 5px 0;
+}
+
+
+/*Home Filtration Slide*/
+#homefiltration {
+    background-image: url('../img/homefiltrationsystem.jpeg');
+}
+#homefiltration h5{
+    margin: 5px 0;
+}
+
+/*Legislative Measures Slide*/
+#law {
+    background-image: url('../img/law.jpg');
+}
+#law h5 {
+    margin: 65px 0 25px;
+}
+
+#theissue {
+    background-image: url('../img/pollution.jpg');
+}
+#theissue h5 {
+    margin: 0px 0 10px;
+}
+
+#whatistheissue {
+    background-image: url('../img/river.jpg');
+}
+
+
+
+/*Buttons for Shifting Carousel*/
+
+/*Div Containing Buttons*/
+.carousel-btns {
+    position:relative;
+    top:210px;
+    z-index:15;
+
+    display:flex;
+    align-self:center;
+    
+    width: 88vw;
+}
+
+/*Default Button Styles*/
+.btn {
+    all:revert;
+    position:absolute;
+    padding: 0.5rem 1rem;
+
+    background-color:var(--color-main-dark);
+    color: var(--color-main-light);
+    border:2px solid var(--color-main-light);
+    font-size:2rem;
+
+    transition: 0.3s;
+}
+
+/*Buttons Invert Color on Hover*/
+.btn:hover {
+    background-color: var(--color-main-light);
+    color: var(--color-main-dark);
+}
+
+/*Left Buttons Shifted Left*/
+#left-1, #left-2, #left-3, #left-4, #left-5, #left-7 {
+    left:0;
+}
+
+/*Right Buttons Shifted Right*/
+#right-1, #right-2, #right-3, #right-4, #right-5, #right-7 {
+    right:0;
+}
+
+/*Forms*/
+
+/*Form Containers with Background Shading*/
+.form-sign {
+    position:relative;
+    padding: 2.5%;
+    width:50%;
+    min-width:380px;
+    height:fit-content;
+    margin:100px auto;
+    background-color: var(--color-dark-shade);
+    color:whitesmoke;
+}
+
+/*Form Title Margin*/
+.form-sign h1 {
+    margin:0 0 20px;
+}
+
+/*Article and Game Titles*/
+
+/*Title Section*/
+.page-title {
+    padding: 15px;
+    margin-top: 70px;
+    margin-left:0;
+    margin-right:0;
+    border-left:none;
+    border-right:none;
+
+    background-color: var(--color-medium);
+    color: whitesmoke;
+    border-top: 5px solid var(--color-main-dark);
+    border-bottom: 5px solid var(--color-main-dark);
+   
+    text-align: center;
+}
+
+/*Main Title*/
+.page-title h2 {
+    font-size:35px;
+    font-weight:500;
+    margin:0;
+}
+
+/*Description Under Title*/
+.page-title em {
+    font-size:18px;
+    font-weight:100;
+}
+
+/*Timeline*/
+.timeline-container{
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:2%;
+}
+
+.timeline {
+    width: 100%;
+    background-color: var(--color-main-light);
+    box-shadow: 0 5px 25px 5px rgba(0, 0, 0, .2);
+}
+
+.up {
+    z-index:20;
+    color:white;
+    position:absolute;
+    top: -70px;
+    width:100%;
+    text-align:center;
+    font-size:100px !important;
+}
+
+.down{
+    z-index:20;
+    color:white;
+    position:absolute;
+    bottom: -45px;
+    width:100%;
+    text-align:center;
+    font-size:100px !important;
+}
+
+.swiper {
+    height: 550px;
+    width: 100%;
+    position: relative;
+}
+
+.swiper-wrapper {
+    transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+}
+
+.swiper-slide {
+    position: relative;
+    color: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display:flex;
+    align-items:center;
+  }
+
+/* creates dark gradient in semicircle on right side */
+.swiper-slide::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: -115%;
+    bottom: -10%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    box-shadow: -230px 0 150px 70vw rgba(0, 0, 0, .7);
+    border-radius: 100%;
+} 
+
+.slide-1 {
+    background-image: url('../img/snyder-2.jpg');
+}
+
+.slide-2 {
+    background-image: url('../img/sink.jpg');
+}
+
+.slide-3 {
+    background-image: url('../img/pollution.jpg');
+}
+
+.slide-4 {
+    background-image: url('../img/riverfire.jpg');
+}
+
+.slide-5{
+    background-image: url('../img/doctor.jpg')
+}
+
+.slide-6{
+    background-image: url('../img/snyder-drinking-water.jpg')
+}
+
+.slide-7{
+    background-image: url('../img/report.png')
+}
+
+.slide-8 {
+    background-image: url('../img/money.jpg')
+}
+
+.slide-9 {
+    background-image: url('../img/karen-weaver.jpg');
+}
+
+.slide-10 {
+    background-image: url('../img/resign.jpg');
+}
+
+.slide-11 {
+    background-image: url('../img/snyder.jpg');
+}
+
+.slide-12{
+    background-image: url('../img/panel.jpg');
+}
+
+.slide-13{
+    background-image: url('../img/law.jpg');
+}
+
+.slide-14{
+    background-image: url('../img/lawyer.jpg');
+}
+
+.slide-15{
+    background-image: url('../img/Flint-water-protestors.jpg');
+}
+
+.slide-16{
+    background-image: url('../img/hard-drive.jpg');
+}
+
+.slide-17{
+    background-image: url('../img/snyder-charges.jpg');
+}
+
+
+.swiper-slide-content {
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    right: 50%;
+    transform: translate(50%, 0);
+    font-size: 18px;
+    z-index: 2;
+  }
+
+.swiper-slide .timeline-year {
+    font-size: 28px;
+    transform: translate3d(20px, 0, 0);
+    color: #ffffff;
+    font-weight: 700;
+    transition: 0.2s ease 0.4s;
+}
+
+.swiper-slide .timeline-line {
+    width: 10px;
+    border: 1px solid;
+    margin: 10px auto 15px; 
+}
+  
+ .swiper-slide .timeline-title {
+    font-size: 25px;
+    font-weight: 200;
+    margin: 0 0 30px;
+    transition: 0.2s ease 0.5s;
+    background-color: var(--color-semi-transparent);
+    text-transform: none;
+}
+
+.swiper-slide .timeline-text {
+    line-height: 1.5;
+    transition: 0.2s ease 0.6s;
+}
+
+.swiper-slide-active .timeline-year {
+    opacity: 1;
+    transition: 0.4s ease 1.6s;
+}
+
+.swiper-slide-active .timeline-title {
+    opacity: 1;
+    transition: 0.4s ease 1.7s;
+}
+
+.swiper-slide-active .timeline-text {
+    opacity: 1;
+    transition: 0.4s ease 1.8s;
+}
+
+.swiper-pagination {
+    flex-direction: column;
+    justify-content: center;
+    width: 250px !important;
+    height: 250px !important; 
+
+}
+
+
+.swiper-pagination-bullet {
+
+    width: 250px !important;
+    height: 36px !important;
+    font-style: italic;
+    text-align: center;
+    font-size: 36px;
+    color: white;  /* color of text */
+    background-color: transparent; /* color of bullet */
+    border: none;
+}
+
+.swiper-pagination-bullet-active{
+    color: var(--color-main-light);   /* color of text */
+    border: none !important;
+    width: 250px !important;
+    height: 50px !important;
+}
+
+/*Footer*/
+
+/*General Footer Styles*/
+footer {
+    box-sizing: border-box;
+    width:100%;
+    padding: 1rem;
+
+    font-size:15px;
+
+    color: var(--color-main-light);
+    background-color: var(--color-main-dark);
+
+    display:flex;
+    justify-content:flex-end;
+
+    position:relative;
+}
+
+.footer-fixed {
+    position:fixed;
+    bottom:0;
+}
+
+/*Adjusting Styles by Page Width*/
+
+/*Adjusting Article Width On Screens Under 500px Width*/
+@media only screen and (max-width: 500px){
+    .artimage, article {
+        width:80vw;
+    }
+}
+
+/*Adjusting Styles of Items On Screens Under 800px Width*/
+@media only screen and (max-width: 800px){
+    /*Title Shifts to Prevent Overlap with Background Image Choice List*/
+    .title {
+        font-size:60px;
+    }
+
+    /*Carousel Title Become Full Width*/
+    h4 {
+        margin-left:0;
+        margin-right:0;
+        border-left:none;
+        border-right:none;
+    }
+
+    /*Form Width*/
+    .form-sign {
+        width:70%;
+    }
+}
+
+.textcontent-3 img {
+    margin: 15px 0;
+    max-width:450px;
+    float:center;
+    align-self:center;
+}
+
+.embedcontainer iframe {
+    all:revert;
+    width:100%;
+    -moz-transform: scale(0.5, 0.5); 
+    -webkit-transform: scale(0.5, 0.5); 
+    -o-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5); 
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    height:300px;
+    border:0px;
+    margin-top:5px;
+}
+
+.embedcontainer {
+    position:relative;
+    width: 100%;
+    margin:10px;
+    height:125px;
+    padding:0 !important;
+    box-sizing: border-box;
+}
+
+.embedcontainer p{
+    width:45%;
+    position:absolute;
+    right:0;
+    top:0;
+    text-align:left;
+    line-height: 1.35;
+}
+
+#obama{
+    margin-top:20px;
+}
+
+#flintt h5 {
+    margin:5px 0 25px;
+}
+
+.solution h5 {
+    font-weight: 600;
+}
+
+.car2 {
+    top:300px;
+}
+
+.car3 {
+    top:250px;
+}
+
+.source {
+    color:rgb(204, 228, 236);
+    text-decoration: underline;
+    text-align:center;
+}
+
+#references h5 {
+    margin: 0 0 25px;
+}
+
+#references .textcontent{
+    width:100%;
+}
+
+/*Dropdown Styles*/
+.dropdown {
+    position:relative;
+    display:flex;
+}
+
+.smallwidth {
+    visibility:hidden;
+}
+
+/*Primary Dropdown*/
+.your-acc-links {
+    display:inline-flex;
+    flex-direction:column;
+    position:absolute;
+    align-items:flex-end;
+    align-content:flex-end;
+    justify-items:flex-end;
+    justify-content:flex-end;
+    background-color: var(--color-main-dark);
+    top:53px;
+    right:0;
+    height:fit-content;
+    padding:0;
+}
+
+.your-acc-links .link {
+    display:flex;
+    justify-content: flex-end;
+}
+
+/*Links in Dropdowns Take Up Dropdown's Full Width*/
+.home, .bgl, .time, .sol, .sor {
+    width: 100%;
+    padding: 5px 8px;
+}
+
+@media only screen and (max-width: 700px){
+    .textcontent, .textcontent-3 {
+        width: 100%;
+    }
+    .textcontent h5, .textcontent-3 h5 {
+        margin:0 0 25px !important;
+    }
+    .largewidth{
+        visibility:hidden;
+    }
+    .smallwidth {
+        visibility:visible;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .carousel{
+        width: 95vw;
+    }
+    #fleximg {
+        visibility:hidden;
+    }
+    #flextext {
+        width:100%;
+    }
+
+    .up{
+        visibility: hidden;
+    }
+
+    .down{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .swiper-pagination{
+        flex-direction: row;
+        justify-content: center;
+        width: 100vh !important;
+        height: 50px !important; 
+    }
+
+    
+    .swiper-pagination-bullet {
+        width: 75vh !important;
+        height: 36px !important;
+    }
+}
+
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    height: 32px;
+    border: 2px;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+  }
+  
+  .scroll-down:before {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 6px);
+      transform: rotate(-45deg);
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: "";
+      border: 2px solid white;
+      border-width: 0px 0 6px 6px;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
+  
+  /*
+  
+  Scrolling Button End
+  
+  */
+  

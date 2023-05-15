@@ -1,0 +1,224 @@
+.main-content-map{
+    position:relative;
+    top:450px;
+    display:flex;
+    flex-direction:column;
+    background-color: rgb(0,0,0,.8);
+    align-items: center;
+}
+
+.main-content-homepage{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    background-color: rgb(0,0,0,.8);
+    align-items: center;
+    top:0;
+}
+
+h6 {
+    background: rgb(213, 244, 255);
+    color:black;
+    font-family: 'Quicksand', sans-serif;
+    padding:10px 20px;
+    width: 60%;
+    margin: 25px 0 5px;
+    border-radius: 5px;
+    line-height: 22px;
+}
+
+.hovertext {
+    background-color: aliceblue;
+    border-radius: 3px;
+    padding: 10px 15px;
+    max-width: 300px;
+    display:none;
+}
+.hovertext h3 {
+    margin: 5px 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+.hovertext p {
+    line-height: 20px;
+}
+
+
+.specialhover h3 {
+    display: inline;
+}
+.specialhover p {
+    display: inline;
+}
+
+.maps {
+    height:800px !important;
+}
+
+.hovertextcontainer {
+    height:0px;
+}
+
+.map {
+    color: var(--color-main-light) !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.map p{
+    margin:7px 0 0;
+    font-size: 1rem !important;
+}
+.textcontent-map{
+    border:2px solid transparent;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(0,0,0,.5);
+    height:800px;
+}
+.textcontent-map h5 {
+    margin:40px 0 10px;
+}
+
+.textcontent-map p {
+    margin:-30px 0 30px;
+    font-family:'Source Sans Pro', sans-serif !important;
+    font-size: 16px !important;
+    width: 80%;
+    text-align: left;
+}
+
+.mapbox {
+    width:fit-content;
+    padding:0;
+    margin-top:-20px;
+}
+
+#Ukraine {
+    padding:20px;
+    width:850px;
+    height:560px;
+    scale: .85;
+    overflow:visible;
+}
+
+g {
+    border:30px solid green;
+    display:block;
+}
+
+#KyivCity {
+    fill: #3184EA;
+    opacity: 0;
+}
+
+.mapBackground {
+    stroke: #000;
+    stroke-width: 0.5;
+}
+
+.east {
+    fill: #0ecbbc;
+}
+
+.west {
+    fill: #00674d;
+}
+
+.lessthan5 {
+    fill: #17b4b4;
+}
+
+.fiveto24 {
+    fill: #057e91;
+}
+
+.twentyfiveto74 {
+    fill: #2d55ab;
+}
+
+.morethan75 {
+    fill: #062f86;
+}
+
+.none {
+    fill: #dadada;
+}
+
+.protests {
+    fill: #0077ab;
+}
+
+.occupation {
+    fill: #01a03b;
+}
+
+.insurgency {
+    fill: #008566;
+}
+
+.annexed {
+    fill: #062f86;
+}
+
+.pointerCircle {
+    r: 2px;
+    fill: #f00;
+    stroke-linecap:square;  
+    stroke-linejoin:bevel;  
+    stroke-miterlimit:4;  
+    stroke-dasharray:none;  
+    stroke-dashoffset:0;  
+    stroke-opacity:1;
+}
+
+.cityName {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.7em;
+    fill: #000;
+    text-shadow: white 1px 1px 0, white -1px -1px 0,
+    white -1px 1px 0, white 1px -1px;
+}
+
+
+#Kyiv:hover ~.cityKyiv,
+#KyivCity:hover ~.cityKyiv,
+#SevastopolCity:hover ~.citySevastopol,
+#Crimea:hover ~.citySimferopol,
+#Cherkasy:hover ~.cityCherkasy,
+#Chernivtsi:hover ~.cityChernivtsi,
+#Dnipropetrovsk:hover ~.cityDnipro,
+#Donetsk:hover ~.cityDonetsk,
+#Ivano-Frankivsk:hover ~.cityIvano-Frankivsk,
+#Kharkiv:hover ~.cityKharkiv,
+#Kherson:hover ~.cityKherson,
+#Khmelnytskyi:hover ~.cityKhmelnytskyi,
+#Kirovohrad:hover ~.cityKropyvnytskyi,
+#Luhansk:hover ~.cityLuhansk,
+#Lviv:hover ~.cityLviv,
+#Mykolaiv:hover ~.cityMykolaiv,
+#Odessa:hover ~.cityOdessa,
+#Poltava:hover ~.cityPoltava,
+#Rivne:hover ~.cityRivne,
+#Sumu:hover ~.citySumu,
+#Chernihiv:hover ~.cityChernihiv,
+#Ternopil:hover ~.cityTernopil,
+#Zakarpattia:hover ~.cityUzhhorod,
+#Vinnytsia:hover ~.cityVinnytsia,
+#Volyn:hover ~.cityLutsk,
+#Zaporizhia:hover ~.cityZaporizhia,
+#Zhytomyr:hover ~.cityZhytomyr{ 
+
+    visibility: visible;
+    opacity: 1;
+} 
+

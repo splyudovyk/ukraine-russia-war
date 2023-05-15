@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/map.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Flint Water Crisis</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Righteous&family=Sofia+Sans:wght@100;200;300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+    <!--Header-->
+	<header class="z-depth-2">
+        <!--Site Title-->
+        <a class="logo" href="index.html">Ukraine-Russia War</a>
+    
+        <nav class="nav-links largewidth">
+            <!--Links to Home Page-->
+            <h5 class="link home"><a href="index.html">Home</a></h5>
+    
+            <!--Links to Timeline and Solutions Pages-->
+            <h5 class="link sol"><a href="map.html">Causes & Factors</a></h5>
+            <h5 class="link time"><a href="timeline.html">The War</a></h5>
+            <h5 class="link sor"><a href="sources.html">References</a></h5>
+    
+            <!--Link to Return To Previous Page-->
+            <h5 class="link return"><a class="return-link">Return Back</a></h5>
+        </nav> 
+
+        <nav class="nav-links smallwidth">
+            <div class="dropdown">
+                <!--Dropdown Title-->
+                <h5 class="link your-acc">Links&nbsp;<span class="arrow-ud-2">&#11167;</span></h5>
+    
+                <!--Dropdown with Links to Your Profile, Change Password, and Mood Tracker Pages-->
+                <nav class="link your-acc-links">
+                    <!--Links to Timeline and Solutions Pages-->
+                    <h5 class="link sol"><a href="map.html">Causes & Factors</a></h5>
+                    <h5 class="link time"><a href="timeline.html">The War</a></h5>
+                    <h5 class="link sor"><a href="sources.html">References</a></h5>
+                </nav>
+            </div>
+    
+            <!--Link to Return To Previous Page-->
+            <h5 class="link return"><a class="return-link">Return Back</a></h5>
+        </nav>
+    </header>
+
+    <!--Background Image and Layer Over Image-->
+    <div class="bg-img bg-img-main"></div>
+    <div class="layer"></div>
+
+    <!--Title-->
+    <section id="title-div">
+            <h1 class="title">The Ukraine-Russia War</h1>
+    </section>
+    <a href="#ani-down-arrow" id="ani-down-arrow" class="scroll-down"></a>
+
+    <!--Main Site Content-->
+    <main class="main-content">
+
+        <section class="main-content-homepage">
+            <h4>Sitemap & Content</h4>
+    
+            <!--Carousel Left and Right Buttons-->
+            <div class="carousel-btns car2" style="top:150px !important">
+                <p class="btn" id="left-1">&#10094;</p>
+                <p class="btn" id="right-1">&#10095;</p>
+            </div>
+    
+            <!--Carousel with Alternate Solutions-->
+            <section class="carousel carousel-slider homepgcarousel">
+                <!--Water Bottle Slide-->
+                <div class="carousel-item solution" id="whatistheissue" style="background-image: url(img/causess.webp);">
+                    <div class="textcontent-3">
+                        <h5>Causes & Factors</h5>
+                        <p>
+                            The Ukraine-Russia War has roots in the Soviet Union era. To learn about causes of and factors that led to the war,
+                            visit <a href="map.html">this page</a>.
+                         </p>
+                        <img src="img/causes.jpg" />
+                  </div>
+                </div>
+    
+                <!--Home Filtration Slide-->
+                <div class="carousel-item solution" style="background-image: url(img/warr.jpeg);">
+                    <div class="textcontent-3" id="flintt">
+                        <h5>The War</h5>
+                        <p>The war has been ongoing since Russia invaded Ukraine in the beginning of 2022. To learn about key events in the war,
+                            visit <a href="timeline.html">this page</a>.
+                        </p>
+                        <img src="img/war.webp" />
+                    </div>
+                </div>
+            </section>
+    </section>
+        <!--Footer-->
+        <footer>
+            <p>Spencer Lyudovyk, Amanda Lin, Abhilash Bodala</p>
+        </footer>
+    </main>
+
+    <!--Javascript Links-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <!--<script type="text/javascript" src="js/img.js"></script>-->
+</body>
+
+</html>

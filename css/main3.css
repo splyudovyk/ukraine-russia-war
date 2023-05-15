@@ -1,0 +1,1387 @@
+/*Resetting Styles, Setting Font Family, Declaring Color Variables*/
+
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555555; 
+  }
+  
+  * {
+      font-family: sans-serif;
+      margin:0;
+  
+      --color-main-light: rgb(216, 216, 216);
+      --color-main-dark: rgba(19, 19, 19, 0.9);
+      --color-medium: rgba(158, 158, 158, 0.651); 
+      --color-dark-shade: rgba(29, 29, 29, 0.7);
+      --color-semi-transparent: rgba(180, 180, 180, 0.4);
+      --layer-color: rgba(83, 83, 83, 0.699);
+  }
+  
+  /*General Styles*/
+  
+  /*General Body Style and Background Image*/
+  body {
+      --body-bg: url('https://80000hours.org/wp-content/uploads/2015/07/congress-1024x440.jpg');
+      background-color: rgba(247, 228, 194, 0.4);
+  }
+  
+  /*Links Have No Text Decoration and Default to White*/
+  a {
+      text-decoration:none;
+      color:white;
+  }
+  
+  /*Bodies With Background Images*/
+  
+  /*General Background Image Style*/
+  .body-bg-img {
+      background-image: var(--body-bg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height:100vh;
+      position:fixed;
+  }
+  
+  /*Pages Backgrounds*/
+  
+  /*Fixed Background Image*/
+  .bg-img {
+      position:fixed;
+      top:0;
+      min-height:100vh;
+      min-width:100vw;
+      z-index:-2;
+      
+      background-position:center;
+      background-size:cover;
+  }
+  
+  /*Home Page Background Image*/
+  .bg-img-main {
+      --bg-img: url('https://cdn.glitch.global/af579f41-59af-4a66-9be2-844e63bff783/export3.png?v=1674133234353');
+      background-image: var(--bg-img);
+      height: auto;
+  }
+  
+  .bg-img-prob {
+      --bg-img: url('https://www.brookings.edu/wp-content/uploads/2018/11/RTS10VM4.jpg');
+      background-image: var(--bg-img);
+  }
+  
+  .bg-img-back {
+      --bg-img: url('https://s7d2.scene7.com/is/image/TWCNews/ap_uscapitol_11142022');
+      background-image: var(--bg-img);
+  }
+  
+  .bg-img-sol {
+    --bg-img: url('https://ichef.bbci.co.uk/news/976/cpsprodpb/2D45/production/_114898511_hi062045152.jpg');
+    background-image: var(--bg-img);
+  }
+  
+  /*Darker Layer Over Background Image on Home Page*/
+  .layer {
+      background-color: var(--layer-color);
+      height:100vh;
+      width:100vw;
+      position:fixed;
+      z-index:-1;
+  }
+  
+  .teaser {
+    width: 23.625%;
+    height: 50%;
+    float: left;
+  }
+  
+  .teaser h5 {
+    color: white;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+  }
+  
+  .teaser p {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    text-align: center;
+    color: #ededed;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 2vh;
+  }
+  
+  .teaser img {
+    width: 25%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 15px 60px 15px 60px;
+    border-radius: 25px;
+    background: white;
+    display: block;
+  }
+  
+  #dimension-fix {
+    width: 20%;
+    height: auto;
+    padding: 15px 60px 15px 60px;
+  }
+  
+  #nw {
+    background: #b52121;
+    margin-left: 2%;
+  }
+  #ne {
+    margin-left: 0.5%;
+    background: #960909;
+  }
+  #sw {
+    margin-left: 0.5%;
+    background: #4A00CD;
+    padding-bottom: 0.21%;
+  }
+  #se {
+    background: #340090;
+    margin-right: 2%;
+    margin-left: 0.5%;
+    padding-bottom: 3.0vh;
+  }
+  
+  #teaser-holder {
+    flex-direction: row;
+    margin-top: 0.75%;
+    margin-bottom: 1.5%;
+  }
+  
+  /*Header and Nav Bar*/
+  
+  /*General Header Style*/
+  header {
+      position:fixed;
+      top:0;
+      right:0;
+      left:0;
+      
+      box-sizing:border-box;
+      width:100vw;
+      height:53px;
+      padding:15px;
+  
+      z-index:20;
+      font-size:15px;
+      
+      display:flex;
+      align-items:center;
+      
+      color:var(--color-main-light);
+      background-color: var(--color-main-dark);
+  
+      --header-font-size: 1.1rem;
+  }
+  
+  /*Logo In Header*/
+  
+  /*Logo Container to Ensure Proper Formatting and Centering*/
+  .logo {
+      display:inline-flex;
+      justify-content:center;
+      align-content:center;
+      font-family: 'Righteous', cursive;
+      font-size: 27px;
+  }
+  
+  .reference {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight:inherit;
+    color: rgb(255, 184, 17);
+  }
+  
+  .reference:hover {
+    color: rgb(255, 227, 162);
+  }
+  
+  .logo:hover {
+    opacity: 0.9;
+  }
+  
+  /*Logo Itself*/
+  .logo img {
+      width: 150px;
+  }
+  
+  /*Nav Bar and Links for Moving Between Pages*/
+  
+  /*Resetting Materialize Nav Styles*/
+  nav {
+      all:revert;
+  }
+  
+  /*Nav Section with Dropdown, Sign In, and Sign Up*/
+  
+  /*General Link Styles*/
+  .link {
+      white-space: nowrap;
+      
+      display:inline-flex;
+      align-items:center;
+      
+      box-sizing: border-box;
+      padding: 0 10px;
+      margin:0;
+      height:100%;
+      
+      color: white;
+      font-size: var(--header-font-size);
+      text-decoration:none;
+      transition:0.2s;
+  }
+  
+  /*Links Container*/
+  .nav-links {
+      display:inline-flex;
+      height:53px;
+      position:absolute;
+      right:20px;
+      margin:0;
+  }
+  
+  /*Nav Bar Font Size, Weight, and Color*/
+  .nav-links a, .nav-links h5 {
+      font-size:15px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 500;
+  }
+  
+  /*Title and Image Choices on Home Page*/
+  
+  /*Div of Title and Image Choices on Home Page*/
+  #title-div {
+      height: 100vw;
+      position:fixed;
+      width:100vw;
+      display:flex;
+      align-content:center;
+  }
+  
+  #title-div-s{
+      height:450px;
+      position:fixed;
+      width:100vw;
+      display:flex;
+      align-content:center;
+  }
+  
+  #title-hero-div {
+      position: absolute;
+      top: 50vh;
+      left:50%;
+      transform: translate(-50%, -50%);
+  }
+  
+  #secondary-title-hero-div {
+      position: absolute;
+      top: 32vh;
+      left:50%;
+      transform: translate(-50%, -50%);
+  }
+  
+  
+  .main-content-s{
+      position:relative;
+      top:450px;
+      display:flex;
+      flex-direction:column;
+      background-color: rgb(0,0,0,.6);
+  }
+  
+  .title {
+      width:80vw;
+      display: block;
+      color: white; 
+      font-size: 7.5vw;
+      cursor: pointer;
+      text-align:center;
+  /*     font-weight:normal !important; */
+      cursor:default;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+  }
+  
+  #down-arrow{
+      position:absolute;
+      color:white;
+      font-size:100px;
+      width:100vw;
+      margin-top:55vh;
+      text-align:center;
+  }
+  
+  /*Background Style for Main Content (Under Title and Image Choices) on Home Page*/
+  
+  /*Main Page Content Underneath Title Div and Above Footer*/
+  .main-content{
+      position:relative;
+      top: 100vh;
+      display:flex;
+      flex-direction:column;
+  }
+  
+  #full-page-content {
+      position:relative;
+      height: 100vh;
+      display:flex;
+      flex-direction:column;
+  }
+  
+  /*Containers for Carousels and Carousel Titles*/
+  .index-main {
+      background-color: rgb(0,0,0,.6);
+      display:flex;
+      flex-direction: column;
+      height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /*Inspirational Quote*/
+  aside {
+      height:fit-content;
+      text-align:center;
+      color:white;
+      font-size:45px;
+      padding:5%;
+  }
+  
+  /*Carousels*/
+  
+  /*Carousel Labels and Anchors*/
+  
+  /*Labels Above Carousels*/
+  h4 {
+      color: whitesmoke;
+      background-color: rgb(205, 144, 0);
+      margin:20px 2% 0;
+      padding:10px;
+      text-transform: uppercase;
+      font-size: 40px;
+     
+      text-align: center;
+  }
+  
+  /*Mental Health Carousel Anchor Just Above Caoursel Label*/
+  .home-carousel {
+      /*Offsets mental health carousel anchor to adjust for fixed header*/
+      padding-top:80px;
+      margin-top:-80px;
+  
+      /*Places offset below image choices to still allow for user to click on them*/
+      z-index:1;
+  
+      height:500px !important;
+  }
+  
+  .home-carousel h4{
+      background-color: var(--color-semi-transparent);
+  }
+  
+  .home-carousel img{
+      display: block;
+      height: 250px;
+      width: auto;
+      margin: 20px auto;
+      z-index: 2;
+  }
+  
+  .home-carousel p{
+      display: block;
+      text-align: center;
+      z-index: 2;
+      color: white;
+      width: 70%;
+      margin: 20px auto;
+  }
+  
+  /*Solution Styles*/
+  .solution {
+      color: var(--color-main-light) !important;
+      background-size: cover !important;
+      background-position: center !important;
+  }
+  .solution p{
+      margin:7px 0;
+      font-size: 1rem !important;
+  }
+  
+  /*Solution Text Content*/
+  .textcontent{
+      width:60%;
+      background-color: rgb(0,0,0,.75);
+      padding: 50px;
+      border:2px solid transparent;
+      height:100%;
+      box-sizing: border-box;
+      display:flex;
+      flex-direction: column;
+      overflow: auto;
+  }
+  .textcontent h5{
+      position:relative;
+      align-self: center;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 30px;
+  }
+  
+  .textcontent-2{
+      width:60%;
+      background-color: rgb(0,0,0,.75);
+      padding: 50px;
+      border:2px solid transparent;
+      height:100%;
+      box-sizing: border-box;
+      display:flex;
+      flex-direction: column;
+      overflow: auto;
+  }
+  .textcontent-2 h5{
+      position:relative;
+      align-self: center;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 30px;
+  }
+  
+  .background, .pros{
+      height:690px !important;
+      width: 100% !important;
+  }
+  
+  .textcontent-3 {
+      width:60%;
+      background-color: rgb(0,0,0,.75);
+      padding: 50px 50px 25px;
+      border:2px solid transparent;
+      height:100%;
+      box-sizing: border-box;
+      display:flex;
+      flex-direction: column;
+      overflow: auto;
+      margin: 20px auto;
+      color: white;
+  }
+  
+  .textcontent-3 h5 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-weight: 600px;
+  }
+  
+  .textcontent-3 p {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .textcontent-3 a {
+      color:rgb(121, 183, 204);
+  }
+  .textcontent-3 a:hover {
+      color:rgb(121, 160, 204);
+  }
+  
+  .background .textcontent-3, .pros .textcontent-3 {
+      width:70%;
+      height: 650px;
+  }
+  
+  /* Generic Text Container*/
+  .randomcontainer {
+      height: 100%;
+      width: 100%;
+      display:flex;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .randomcontainer p {
+    margin-top: 10px;
+  }
+  
+  .randomcontainer-2 {
+      height: 100%;
+      width: 100%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding:20px 0;
+  }
+  
+  /*Replace Pipe Slide/Item*/
+  
+  .pipe {
+      width: 80%;
+      min-width: 400px;
+      height: fit-content;
+    display: block;
+      margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  
+  .solution h5 {
+      font-size:1.5rem;
+      font-weight: 600;
+  }
+  
+  .pro h5 {
+      font-size:1.5rem;
+      font-weight: 600;
+  }
+  
+  .pro {
+      color: var(--color-main-light) !important;
+      background-size: cover !important;
+      background-position: center !important;
+  }
+  .pro p{
+      margin:7px 0;
+      font-size: 1rem !important;
+  }
+  
+  .num {
+      color: #ff3d3d;
+      font-family:inherit;
+  }
+  
+  
+  /*Restoring Faith Slide/Item*/
+  #restoringfaith {
+      background-image: url('./img/flintgov.jpeg');
+  }
+  #restoringfaith h5 {
+      margin: 0px 0 15px;
+  }
+  #mistrust{
+      overflow:hidden;
+  }
+  
+  
+  #lead {
+      background-image: url('./img/lead.jpg');
+  }
+  #lead h5 {
+      margin: 0px 0 15px;
+  }
+  
+  #savingmoney {
+      background-image: url('./img/money.jpg');
+  }
+  
+  #savingmoney h5, #whatistheissue h5, #flintriver h5, #bridge h5, #change h5, #corruption h5 {
+      margin:0 0 20px;
+  }
+  
+  
+  .colorlink {
+      color:rgb(121, 183, 204);
+  }
+  .colorlink:hover {
+      color:rgb(107, 167, 191);
+  }
+  
+  .whyitmatters {
+      height:600px !important;
+  }
+  
+  .whyitmatters .textcontent-3 {
+      height:560px;
+  }
+  
+  #flintriver {
+      background-image: url('./img/riverfire.jpg')
+  }
+  
+  
+  /*Carousel Container*/
+  .carousel {
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      align-self:center;
+      padding:0;
+      margin:20px 0;
+      width:85vw;
+      max-width: 1000px;
+      box-sizing: border-box;
+  }
+  
+  /*Carousel Items*/
+  .carousel-item{
+      all:revert;
+  
+      position:relative;
+      border:none;
+      box-sizing: border-box;
+  }
+  
+  .solutions{
+      height:500px;
+  }
+  
+  
+  
+  /*Water Bottle Slide*/
+  #waterbottle{
+      background-image: url('./img/waterbottles.jpg');
+  }
+  #waterbottle h5{
+      margin: 45px 0 25px;
+  }
+  
+  #faith{
+      background-image: url('./img/waterbottles.jpg');
+  }
+  #faith h5{
+      margin: 5px 0;
+  }
+  
+  
+  /*Home Filtration Slide*/
+  #homefiltration {
+      background-image: url('./img/homefiltrationsystem.jpeg');
+  }
+  #homefiltration h5{
+      margin: 5px 0;
+  }
+  
+  /*Legislative Measures Slide*/
+  #law {
+      background-image: url('./img/law.jpg');
+  }
+  #law h5 {
+      margin: 65px 0 25px;
+  }
+  
+  #theissue {
+      background-image: url('./img/pollution.jpg');
+  }
+  #theissue h5 {
+      margin: 0px 0 10px;
+  }
+  
+  #whatistheissue {
+      background-image: url('./img/river.jpg');
+  }
+  
+  
+  
+  /*Buttons for Shifting Carousel*/
+  
+  /*Div Containing Buttons*/
+  .carousel-btns {
+      position:relative;
+      top:210px;
+      z-index:15;
+  
+      display:flex;
+      align-self:center;
+      
+      width: 88vw;
+  }
+  
+  /*Default Button Styles*/
+  .btn {
+      position:absolute;
+      padding: 0.5rem 1rem;
+  
+      background-color:var(--color-main-dark);
+      color: var(--color-main-light);
+      border:2px solid var(--color-main-light);
+      font-size:2rem;
+  
+      transition: 0.3s;
+  }
+  
+  /*Buttons Invert Color on Hover*/
+  .btn:hover {
+      background-color: var(--color-main-light);
+      color: var(--color-main-dark);
+  }
+  
+  /*Left Buttons Shifted Left*/
+  #left-1, #left-2, #left-3, #left-4, #left-5 {
+      left:0;
+  }
+  
+  /*Right Buttons Shifted Right*/
+  #right-1, #right-2, #right-3, #right-4, #right-5 {
+      right:0;
+  }
+  
+  /*Forms*/
+  
+  /*Form Containers with Background Shading*/
+  .form-sign {
+      position:relative;
+      padding: 2.5%;
+      width:50%;
+      min-width:380px;
+      height:fit-content;
+      margin:100px auto;
+      background-color: var(--color-dark-shade);
+      color:whitesmoke;
+  }
+  
+  /*Form Title Margin*/
+  .form-sign h1 {
+      margin:0 0 20px;
+  }
+  
+  /*Article and Game Titles*/
+  
+  /*Title Section*/
+  .page-title {
+      padding: 15px;
+      margin-top: 70px;
+      margin-left:0;
+      margin-right:0;
+      border-left:none;
+      border-right:none;
+  
+      background-color: var(--color-medium);
+      color: whitesmoke;
+      border-top: 5px solid var(--color-main-dark);
+      border-bottom: 5px solid var(--color-main-dark);
+     
+      text-align: center;
+  }
+  
+  /*Main Title*/
+  .page-title h2 {
+      font-size:35px;
+      font-weight:500;
+      margin:0;
+  }
+  
+  /*Description Under Title*/
+  .page-title em {
+      font-size:18px;
+      font-weight:100;
+  }
+  
+  /*Timeline*/
+  .timeline-container{
+      height: 550px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin:2%;
+  }
+  
+  .timeline {
+      width: 100%;
+      background-color: var(--color-main-light);
+      box-shadow: 0 5px 25px 5px rgba(0, 0, 0, .2);
+  }
+  
+  .up {
+      z-index:20;
+      color:white;
+      position:absolute;
+      top: -70px;
+      width:100%;
+      text-align:center;
+      font-size:100px !important;
+  }
+  
+  .down{
+      z-index:20;
+      color:white;
+      position:absolute;
+      bottom: -45px;
+      width:100%;
+      text-align:center;
+      font-size:100px !important;
+  }
+  
+  .swiper {
+      height: 550px;
+      width: 100%;
+      position: relative;
+  }
+  
+  .swiper-wrapper {
+      transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+  }
+  
+  .swiper-slide {
+      position: relative;
+      color: rgb(255, 255, 255);
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display:flex;
+      align-items:center;
+    }
+  
+  /* creates dark gradient in semicircle on right side */
+  .swiper-slide::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      right: -115%;
+      bottom: -10%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .7);
+      box-shadow: -230px 0 150px 70vw rgba(0, 0, 0, .7);
+      border-radius: 100%;
+  } 
+  
+  .slide-1 {
+      background-image: url('./img/snyder-2.jpg');
+  }
+  
+  .slide-2 {
+      background-image: url('./img/sink.jpg');
+  }
+  
+  .slide-3 {
+      background-image: url('./img/pollution.jpg');
+  }
+  
+  .slide-4 {
+      background-image: url('./img/riverfire.jpg');
+  }
+  
+  .slide-5{
+      background-image: url('./img/doctor.jpg')
+  }
+  
+  .slide-6{
+      background-image: url('./img/snyder-drinking-water.jpg')
+  }
+  
+  .slide-7{
+      background-image: url('./img/report.png')
+  }
+  
+  .slide-8 {
+      background-image: url('./img/money.jpg')
+  }
+  
+  .slide-9 {
+      background-image: url('./img/karen-weaver.jpg');
+  }
+  
+  .slide-10 {
+      background-image: url('./img/resign.jpg');
+  }
+  
+  .slide-11 {
+      background-image: url('./img/snyder.jpg');
+  }
+  
+  .slide-12{
+      background-image: url('./img/panel.jpg');
+  }
+  
+  .slide-13{
+      background-image: url('./img/law.jpg');
+  }
+  
+  .slide-14{
+      background-image: url('./img/lawyer.jpg');
+  }
+  
+  .slide-15{
+      background-image: url('./img/Flint-water-protestors.jpg');
+  }
+  
+  .slide-16{
+      background-image: url('./img/hard-drive.jpg');
+  }
+  
+  .slide-17{
+      background-image: url('./img/snyder-charges.jpg');
+  }
+  
+  
+  .swiper-slide-content {
+      position: absolute;
+      text-align: center;
+      width: 80%;
+      max-width: 600px;
+      right: 50%;
+      transform: translate(50%, 0);
+      font-size: 18px;
+      z-index: 2;
+    }
+  
+  .swiper-slide .timeline-year {
+      font-size: 28px;
+      transform: translate3d(20px, 0, 0);
+      color: #ffffff;
+      font-weight: 700;
+      transition: 0.2s ease 0.4s;
+  }
+  
+  .swiper-slide .timeline-line {
+      width: 10px;
+      border: 1px solid;
+      margin: 10px auto 15px; 
+  }
+    
+   .swiper-slide .timeline-title {
+      font-size: 25px;
+      font-weight: 200;
+      margin: 0 0 30px;
+      transition: 0.2s ease 0.5s;
+      background-color: var(--color-semi-transparent);
+      text-transform: none;
+  }
+  
+  .swiper-slide .timeline-text {
+      line-height: 1.5;
+      transition: 0.2s ease 0.6s;
+  }
+  
+  .swiper-slide-active .timeline-year {
+      opacity: 1;
+      transition: 0.4s ease 1.6s;
+  }
+  
+  .swiper-slide-active .timeline-title {
+      opacity: 1;
+      transition: 0.4s ease 1.7s;
+  }
+  
+  .swiper-slide-active .timeline-text {
+      opacity: 1;
+      transition: 0.4s ease 1.8s;
+  }
+  
+  .swiper-pagination {
+      flex-direction: column;
+      justify-content: center;
+      width: 250px !important;
+      height: 250px !important; 
+  
+  }
+  
+  
+  .swiper-pagination-bullet {
+  
+      width: 250px !important;
+      height: 36px !important;
+      font-style: italic;
+      text-align: center;
+      font-size: 36px;
+      color: white;  /* color of text */
+      background-color: transparent; /* color of bullet */
+      border: none;
+  }
+  
+  .swiper-pagination-bullet-active{
+      color: var(--color-main-light);   /* color of text */
+      border: none !important;
+      width: 250px !important;
+      height: 50px !important;
+  }
+  
+  /*Footer*/
+  
+  /*General Footer Styles*/
+  footer {
+      box-sizing: border-box;
+      width:100%;
+      padding: 1rem;
+  
+      font-size:15px;
+  
+      color: var(--color-main-light);
+      background-color: var(--color-main-dark);
+  
+      display:flex;
+      justify-content:flex-end;
+  
+      position:relative;
+  }
+  
+  .footer-fixed {
+      position:fixed;
+      bottom:0;
+  }
+  
+  /*Adjusting Styles by Page Width*/
+  
+  /*Adjusting Article Width On Screens Under 500px Width*/
+  @media only screen and (max-width: 500px){
+      .artimage, article {
+          width:80vw;
+      }
+  }
+  
+  /*Adjusting Styles of Items On Screens Under 800px Width*/
+  @media only screen and (max-width: 800px){
+      /*Title Shifts to Prevent Overlap with Background Image Choice List*/
+      .title {
+          font-size:60px;
+      }
+  
+      /*Carousel Title Become Full Width*/
+      h4 {
+          margin-left:0;
+          margin-right:0;
+          border-left:none;
+          border-right:none;
+      }
+  
+      /*Form Width*/
+      .form-sign {
+          width:70%;
+      }
+  }
+  
+  .textcontent-3 img {
+      margin: 15px 0;
+      max-width:450px;
+      float:center;
+      align-self:center;
+  }
+  
+  .embedcontainer iframe {
+      all:revert;
+      width:100%;
+      -moz-transform: scale(0.5, 0.5); 
+      -webkit-transform: scale(0.5, 0.5); 
+      -o-transform: scale(0.5, 0.5);
+      -ms-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5); 
+      -moz-transform-origin: top left;
+      -webkit-transform-origin: top left;
+      -o-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+      height:300px;
+      border:0px;
+      margin-top:5px;
+  }
+  
+  .embedcontainer {
+      position:relative;
+      width: 100%;
+      margin:10px;
+      height:125px;
+      padding:0 !important;
+      box-sizing: border-box;
+  }
+  
+  .embedcontainer p{
+      width:45%;
+      position:absolute;
+      right:0;
+      top:0;
+      text-align:left;
+      line-height: 1.35;
+  }
+  
+  #obama{
+      margin-top:20px;
+  }
+  
+  #flintt h5, #bridgetext h5, #changetext h5, #corruptiontext h5 {
+      margin:5px 0 25px;
+  }
+  
+  
+  
+  .car2 {
+      top:300px;
+  }
+  
+  .car3 {
+      top:250px;
+  }
+  
+  .source {
+      color:rgb(204, 228, 236);
+      text-decoration: underline;
+      text-align:center;
+  }
+  
+  #references h5 {
+      margin: 0 0 25px;
+  }
+  
+  #references .textcontent{
+      width:100%;
+  }
+  
+  /*Dropdown Styles*/
+  .dropdown {
+      position:relative;
+      display:flex;
+  }
+  
+  .smallwidth {
+      visibility:hidden;
+  }
+  
+  /*Primary Dropdown*/
+  .your-acc-links {
+      display:inline-flex;
+      flex-direction:column;
+      position:absolute;
+      align-items:flex-end;
+      align-content:flex-end;
+      justify-items:flex-end;
+      justify-content:flex-end;
+      background-color: var(--color-main-dark);
+      top:53px;
+      right:0;
+      height:fit-content;
+      padding:0;
+  }
+  
+  .your-acc-links .link {
+      display:flex;
+      justify-content: flex-end;
+  }
+  
+  /*Links in Dropdowns Take Up Dropdown's Full Width*/
+  .home, .bgl, .time, .sol, .sor {
+      width: 100%;
+      padding: 5px 8px;
+  }
+  
+  @media only screen and (max-width: 700px){
+      .textcontent, .textcontent-3 {
+          width: 100%;
+      }
+      .textcontent h5, .textcontent-3 h5 {
+          margin:0 0 25px !important;
+      }
+      .largewidth{
+          visibility:hidden;
+      }
+      .smallwidth {
+          visibility:visible;
+      }
+  }
+  
+  @media only screen and (max-width: 700px){
+      .carousel{
+          width: 95vw;
+      }
+      #fleximg {
+          visibility:hidden;
+      }
+      #flextext {
+          width:100%;
+      }
+  
+      .up{
+          visibility: hidden;
+      }
+  
+      .down{
+          visibility: hidden;
+      }
+  }
+  
+  @media only screen and (max-width: 1200px){
+      .swiper-pagination{
+          flex-direction: row;
+          justify-content: center;
+          width: 100vh !important;
+          height: 50px !important; 
+      }
+  
+      
+      .swiper-pagination-bullet {
+          width: 75vh !important;
+          height: 36px !important;
+      }
+  }
+  
+  /*
+  
+  Scrolling Button
+  
+  */
+  
+  .scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    height: 32px;
+    border: 2px;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+  }
+  
+  .scroll-down:before {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 6px);
+      transform: rotate(-45deg);
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: "";
+      border: 2px solid white;
+      border-width: 0px 0 6px 6px;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
+  
+  /*
+  
+  Scrolling Button End
+  
+  */
+  
+  section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .index-main h4 {
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 600;
+  }
+  
+  #by-the-numbers {
+    height: auto;
+    width: 50vw;
+    margin-top: 0.5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 7.75vw;
+    padding-right: 7.75vw;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+  }
+  
+  #vid2 {
+    width: 80%; /* width of iframe wrapper */
+    padding: 0% 0% 56.25%; /* 16:9 ratio */
+  }
+  
+  #vid3 {
+    width: 80%; /* width of iframe wrapper */
+    padding: 0% 0% 56.25%; /* 16:9 ratio */
+  }
+  
+  #vid4 {
+    width: 80%; /* width of iframe wrapper */
+    padding: 0% 0% 56.25%; /* 16:9 ratio */
+  }
+  
+  
+  .ytVid {
+    position: relative;
+    display: block;
+    width: 50%; /* width of iframe wrapper */
+    height: 0;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0% 0% 35.15625%; /* 16:9 ratio */
+    overflow: hidden;
+  }
+  
+  .ytVid iframe {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  #generic-center-img {
+    display: block;
+    width: 25vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  
+  #generic-center-img-2 {
+    display: block;
+    width: 40vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+  
+  #expand-sources {
+    width: 100%;
+  }
+  
+  #true-solution {
+    font-size: 1.2vw;
+  }
